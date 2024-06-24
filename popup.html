@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecionar</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('redirect-button').addEventListener('click', function() {
+        chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="redirect-button">Ir para Página</button>
+</body>
+</html>

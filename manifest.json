@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "WT MFD 1.0",
+    "version": "1.0",
+    "description": "MFD WAR THUNDER",
+    "permissions": [
+      "tabs"
+    ],
+    "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Clique para redirecionar"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+    }
+  }
+  
