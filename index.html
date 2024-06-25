@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="icons.ttf" rel="stylesheet">
     <title>WT MFD 1.0</title>
-    
     <script src="mapa.js"></script>
     <script src="jquery-1.10.2.min.js"></script>
-    <script src="sylvester.src.js"></script>
-
-    
+    <script src="sylvester.src.js"></script> 
     <script src="script.js"></script>
     <script src="hammer.min.js"></script>
     <script src="jquery-ui-1.10.3.interact.min.js"></script>
@@ -65,19 +63,34 @@
 
             </div>
             <div class="MFD2">
+                <a id="b1"></a>
+                <a id="b2"></a>
                 <div class="flex-column" class="margin">
                     <p class="modelo" id="type"></p>
-                    <div class="flex-row" class="Speed">
+                    <div class="flex-row" class="Speed" class="painel">
                         <p class="modelo" id="type"></p>
                       
                     </div>
-                    <div class="flex-row" class="Speed">
-                        <div id="noz">
+                    <div id="t2" class="Speed">
+                        
+                        <div id="vtol">
                             <img src="arrow.png" alt="Arrow" class="arrow" id="arrow">
                             <img class="jet" src="jet.png" alt="">
                         </div>
-                        <div id="noz">
+                        <div id="engine">
                             <img src="arrow2.png" alt="Arrow" class="arrow2" id="arrow2">
+                            <img class="jet2" src="engine.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <div id="t1" class="Speed">
+                        
+                        <div id="swapwings">
+                            <img src="arrow3.png" alt="Arrow" class="wings" id="wings">
+                            <img class="jet" src="wings.png" alt="">
+                        </div>
+                        <div id="engine">
+                            <img src="arrow2.png" alt="Arrow" class="arrow2" id="enginearrow2">
                             <img class="jet2" src="engine.png" alt="">
                         </div>
                         
@@ -86,7 +99,7 @@
                 </div>
 
             </div>
-            <div class="MFD2">
+            <div class="MFD3">
                 <div class="flex-column" class="margin">
                     <div class="flex-row" class="Speed">
                     
@@ -101,18 +114,15 @@
                 </div>
 
             </div>
-            <div class="MFD2">
-                <div class="flex-column" class="margin">
-                    <div class="flex-row" class="Speed">
-                        <p class="modelo" id="type"></p>
-                      
-                    </div>
-                    <div class="flex-row" class="Speed">
-                        <div id="noz">
+            <div class="MFD3">
+                <div class="flex-column2">
+                   <p class="compassn" id="compassn">s</p>
+                   <div class="compascentro">
+                    <img id="compass" class="compassc" src="compassc.png" alt="">
+                    <img class="compassplane" src="compassplane.png" alt="">
 
-                        </div>
-                        
-                    </div>
+                   </div>
+
     
                 </div>
 
@@ -121,7 +131,8 @@
 
    
         
-        
+    <script src="buttons.js"></script>
+
     </section>
     
 </body>

@@ -390,17 +390,17 @@ function draw_player(canvas, ctx, item, dt) {
 
   return {'x': x, 'y': y, 'dir': dir.elements}
 }
-
+const font = new FontFace('icons', 'url(icons.tff)');
 
 function draw_map_object(canvas, ctx, item, rotate) {
   var x = canvas.width*item['x']
   var y = canvas.height*item['y']
 
   ctx.fillStyle = calcMapObjectColor(item)
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 0.1;
   ctx.strokeStyle = '#000';
 
-  ctx.font = 'bold 18pt Arial'
+  ctx.font = 'bold 18pt icons'
   ctx.textBaseline = 'middle'
   ctx.textAlign = 'center'
 
@@ -412,9 +412,9 @@ function draw_map_object(canvas, ctx, item, rotate) {
   else if (item['icon'] == 'waypoint')
     s = '6'
   else if (item['icon'] == 'capture_zone')
-    s = '7'        
+    s = '9'        
   else if (item['icon'] == 'bombing_point')
-    s = '8'
+    s = '9'
   else if (item['icon'] == 'defending_point')
     s = '9'
   else if (item['icon'] == 'respawn_base_tank')

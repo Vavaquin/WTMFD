@@ -1,3 +1,5 @@
+
+
 let currentData = {
     mach: 0,
     altitude_10k: 0,
@@ -5,7 +7,8 @@ let currentData = {
     weapon4: 0,
     fuel_consume: 0,
     type: "",
-    nozzle_angle: 0
+    nozzle_angle: 0,
+    compass: 0
 };
 
 let targetData = {
@@ -15,7 +18,8 @@ let targetData = {
     weapon4: 0,
     fuel_consume: 0,
     type: "",
-    nozzle_angle: 0
+    nozzle_angle: 0,
+    compass:0
 };
 
 let stopLoop = false;
@@ -35,6 +39,7 @@ function updateDisplay() {
     currentData.fuel_consume = interpolate(currentData.fuel_consume, targetData.fuel_consume, alpha);
     currentData.nozzle_angle = interpolate(currentData.nozzle_angle, targetData.nozzle_angle, alpha);
     currentData.throttle = interpolate(currentData.throttle1, targetData.throttle, alpha);
+    currentData.compass = interpolate(currentData.compass, targetData.compass, alpha);
     currentData.type = targetData.type; // No interpolation needed for type
 
     document.getElementById('speed').innerText = `MACH: ${currentData.mach.toFixed(2)}`;
@@ -42,12 +47,24 @@ function updateDisplay() {
     document.getElementById('fuel').innerText = `FUEL: ${currentData.fuel1.toFixed(0)}`;
     document.getElementById('type').innerText = `MODEL: ${currentData.type}`;
     document.getElementById('cfuel').innerText = `FUEL FLOW: ${currentData.fuel_consume.toFixed(0)}`;
+    document.getElementById('compassn').innerText = `[${currentData.compass.toFixed(0)}]`;
+
+    // mostradores
 
     const arrow = document.getElementById('arrow');
     arrow.style.transform = `rotate(${currentData.nozzle_angle}deg)`;
 
     const arrow2 = document.getElementById('arrow2');
     arrow2.style.transform = `rotate(${targetData.throttle * 90}deg)`;
+    const arrowe = document.getElementById('enginearrow2');
+    arrowe.style.transform = `rotate(${targetData.throttle * 90}deg)`;
+
+    const wings = document.getElementById('wings')
+    wings.style.transform = `rotate(${targetData.wing_sweep_indicator * -90}deg)`;
+
+    const compass = document.getElementById('compass');
+    compass.style.transform = `rotate(${currentData.compass * -1}deg)`;
+
 
     // Calculate remaining fuel time
     if (currentData.fuel_consume > 0) {
@@ -73,6 +90,9 @@ async function fetchSpeed() {
         targetData.type = data.type;
         targetData.nozzle_angle = data.nozzle_angle;
         targetData.throttle = data.throttle;
+        targetData.wing_sweep_indicator = data.wing_sweep_indicator;
+        targetData.compass = data.compass;
+
 
     } catch (error) {
         if (error.name !== 'AbortError') {
