@@ -116,8 +116,6 @@ function animationLoop() {
 }
 
 function resetScript() {
-    stopLoop = true;
-    abortController.abort(); // Cancel all ongoing fetch requests
 
     // Create a new AbortController for the next run
     abortController = new AbortController();
@@ -130,30 +128,24 @@ function resetScript() {
         weapon4: 0,
         fuel_consume: 0,
         type: "",
-        nozzle_angle: 0
+        nozzle_angle: 0,
+        compass:0
     };
-
-    targetData = {
-        mach: 0,
-        altitude_10k: 0,
-        fuel1: 0,
-        weapon4: 0,
-        fuel_consume: 0,
-        type: "",
-        nozzle_angle: 0
-    };
-
     // Restart loops
-    updateSpeedLoop();
-    animationLoop();
+
 }
+
+
 
 // Start the update loop when the page loads
 window.onload = () => {
     updateSpeedLoop();
     animationLoop();
 
-    document.getElementById('sync').addEventListener('click', () => {
-        location.reload();
+    // document.getElementById('sync').addEventListener('click', () => {
+    //     location.reload();
+    // });
+    document.getElementById('synctrue').addEventListener('click', () => {
+        resetScript();
     });
 };
