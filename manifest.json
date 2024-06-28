@@ -1,10 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "WT MFD 1.0",
-    "version": "1.0",
+    "name": "WT MFD 1.0.1",
+    "version": "1.0.1",
     "description": "MFD WAR THUNDER",
     "permissions": [
-      "tabs"
     ],
     "icons": {
     "16": "icon16.png",
