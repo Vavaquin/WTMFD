@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFD About</title>
+</head>
+<body>
+    <header>
+        <div class="flex-column">
+            <div class="flex-row">
+                <a href="#Functionality">Functionality</a>
+                <a href="#Support">Support the project</a>
+                <a href="#about">About me</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="flex-column">
+            <h1>About WT MFD</h1>
+            <div class="flex-row">
+                <div class="flex-column" class="start">
+                    <img src="images/Sprite-0001.png" alt="">
+                    <img src="images/Sprite-0002.png" alt="">
+                    <img src="images/Sprite-0003.png" alt="">
+
+                </div>
+                
+                <div class="text"><p>WT MFD (Multi Functional Display) is a Chrome extension that 
+                    simulates a real MFD, providing important and useful 
+                    information for flights in War Thunder. The extension displays data such as:</p>
+                    <div class="text2">
+                        <br>
+                        <p>Speed "mach"</p><br>
+                        <p>Altitude</p><br>
+                        <p>Fuel level</p><br>
+                        <p>Fuel flow</p><br>
+                        <p>Dynamic flight time</p><br>
+                        <p>VTOL angle</p><br>
+                        <p>Variable geometry wing angle</p><br>
+                        <p>Engine power</p><br>
+                        <p>Compass</p><br>
+                        <p>Real-time map</p>
+                        <a href="https://github.com/Vavaquin/WTMFD"><p>GITHUB OF THE WT-MFD</p></a>
+                        <BR>
+                    </div>
+
+                
+                </div>
+                
+            </div>
+
+        </section>
+        <br><br>
+        <section  class="flex-column">
+            <h1 id="Functionality">Functionality</h1>
+            <div class="flex-column">
+                <div class="text2"><p>The extension retrieves information directly from the localhost provided by War Thunder, transcribing it visually in a manner similar to an MFD found in advanced fighter jets.</p>
+                    <br>
+                    <h2>Flight Time</h2><br>
+                    <p>Flight time is calculated by dividing the total fuel by the current consumption, providing a dynamic flight time estimate based on the current acceleration, altitude, barometric pressure, and other variables extracted from the localhost .json file.</p><br>
+                    <h2>Additional Features</h2><br>
+                    <p>Currently, only the central MFD is touch-interactive. Future versions plan to make all MFDs interactive.
+                      <br>  "The map's update rate is reduced for optimization, preventing data lag."</p><br>
+                </div>
+                
+            </div>
+
+        </section>
+        <br>
+        <br>
+        <section class="flex-column">
+            <h1>Important</h1>
+            <div class="flex-row">
+                <div class="flex-column">
+                    <img src="images/Sprite-0005.png" alt="">
+
+                </div>
+                
+                <div class="text"><p>Certain aircraft do not display some data, this is due to the fact that the "indicators" library is used, in which case the number will appear as "NaN"</p>
+                    <br><br><p>The sync button is currently a necessary evil, this will be fixed soon and if you are reading this it means you are one of the first people to test the version of this extension</p>
+
+
+                
+                </div>
+                
+            </div>
+
+        </section><br><br>
+        <section class="flex-column">
+            <h1 id="#Support">Supporting the Project</h1>
+            <p>Although the project is free, you can contribute with donations through >> <a href="https://ko-fi.com/vavaquin">KO-FI</a></p><br>
+            
+        </section><br><br>
+        <section>
+            <div class="flex-column">
+                <h1 id="about">about me</h1>
+                <div class="flex-row">
+                    <img class="abouts" src="images/Sprite-00032.png" alt="">
+                    <p>My name is Vavaquin. I am a pixel artist and recently started exploring HTML, CSS, and JavaScript. <br><br>I decided to create this project to apply my knowledge and learn more, fulfilling a need I always felt while playing War Thunder: having detailed information on a second monitor.
+
+                        I have been playing War Thunder for a long time, mainly in Air SB (Simulation) mode, with approximately 800 hours in this mode alone. The introduction of more realistic MFDs in the latest War Thunder update inspired me to create my own MFD.
+                        
+                        This project has been challenging, and although there is still much to improve, I am satisfied with the progress so far.</p>
+                </div>
+            </div><br><br>
+            <div class="text2">
+                <p>My social media</p>
+                <a href="https://www.instagram.com/vavaquin/">Instagram</a><br>
+                <!-- <br><br><br>
+                <p>for more information</p>
+                <a href="t">WT-MFD</a> -->
+            </div>
+
+
+        </section>
+
+    </main>
+</body>
+</html>

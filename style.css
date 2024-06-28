@@ -39,9 +39,8 @@ body {
 }
 
 section{
-	width: ;
-    margin: 0 auto;
 
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,6 +148,9 @@ section{
     }
 }
 
+.text2d{
+	text-align: center;
+}
 
 #noz {
     display: flex;
