@@ -11,6 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font), Arial, sans-serif;
+	
 }
 
 a {
@@ -130,6 +131,7 @@ section{
     height: 400px;
     padding: 40px;
     display: flex;
+	position: relative;
     flex-direction: row;
     align-items: start;
     justify-content: center;
@@ -231,6 +233,26 @@ section{
 	top: 102px;
 	z-index: 10;
 }
+
+#bz1{
+	width: 22px;
+	height: 22px;
+
+	position: absolute;
+	left: 10px;
+	top: 144px;
+	z-index: 10;
+}
+#bz2{
+	width: 22px;
+	height: 22px;
+
+	position: absolute;
+	left: 10px;
+	top: 102px;
+	z-index: 10;
+}
+
 
 #swapwings {
     display: flex;
@@ -1465,6 +1487,11 @@ body .ui-tooltip {
 	border-radius: 8px;
 }
 
+.alavanca{
+	justify-self: center;
+	position: relative;
+	top: 90px;
+}
 
 .teste22{
 	width: 305px;
@@ -1473,4 +1500,106 @@ body .ui-tooltip {
 
 	height: auto;
 	border-radius: 40px;
+}
+
+.MFD4{
+	position: relative;
+	width: 400px;
+    height: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-shrink: 0;
+
+    background-image: url(mfdgear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+
+}
+
+#led1{
+	position: absolute;
+	top: 96px;
+	left: 94px;
+	min-height: 18px;
+	min-width: 41px;
+	transition:all 1s;
+
+	
+}
+
+.led-inactive {
+	background-color: #cd0a0a;
+}
+.led-active {
+	background-color: #0f0;
+	box-shadow: 0 0 20px #0f0;
+}
+
+
+#led2{
+	position: absolute;
+	top: 96px;
+	left: 268px;
+	min-height: 18px;
+	min-width: 41px;
+	transition:all 1s;
+
+	
+}
+
+.led-inactive1 {
+	background-color: #cd0a0a;
+}
+.led-active1 {
+	background-color: #0f0;
+	box-shadow: 0 0 20px #0f0;
+}
+
+
+.led-inactive2 {
+	background-color: #cd0a0a;
+}
+.led-active2 {
+	background-color: #0f0;
+	box-shadow: 0 0 20px #0f0;
+}
+
+#led3{
+	position: absolute;
+	top: 146px;
+	left: 94px;
+	min-height: 18px;
+	min-width: 41px;
+	transition:all 1s;
+
+	
+}
+#aoa{
+	position: absolute;
+	z-index: -5;
+	top: 65px;
+	left: 340px;
+	min-height: 1px;
+	min-width: 10px;
+	transition:all 800ms;
+	background-color: rgb(172, 172, 172);
+
+	
+}
+
+#g_meter{
+	position: absolute;
+	z-index: -5;
+	top: 65px;
+	left: 51px;
+	min-height: 1px;
+	min-width: 10px;
+	transition:all 900ms;
+	background-color: rgb(172, 172, 172);
+
+	
 }

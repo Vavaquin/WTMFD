@@ -37,6 +37,8 @@ hammer_opt = {
   no_mouseevents: true
 }
 
+
+
 indicator_columns = [
   [
     'type', 'speed', 'speed_01', 'speed_02',
@@ -333,7 +335,7 @@ function draw_airfield(canvas, ctx, item) {
   var ex = canvas.width *item['ex']*map_scale + map_pan[0]
   var ey = canvas.height*item['ey']*map_scale + map_pan[1]
   
-  ctx.lineWidth = 3.0*Math.sqrt(map_scale)
+  ctx.lineWidth = 8.0*Math.sqrt(map_scale)
   ctx.strokeStyle = calcMapObjectColor(item)
   ctx.beginPath()
   ctx.moveTo(sx, sy)
@@ -650,7 +652,7 @@ function update_state(data) {
 }
 
 function updateSlow() {
-  $.ajax({type:'GET', url:'http://localhost:8111/mission.json',  success:format_mission_data })
+  // $.ajax({type:'GET', url:'http://localhost:8111/mission.json',  success:format_mission_data })
   $.ajax({type:'GET', url:'http://localhost:8111/map_obj.json',  success:update_object_positions })
   $.ajax({type:'GET', url:'http://localhost:8111/map_info.json', success:update_map_info })
 //   $.ajax({type:'GET', url:'http://localhost:8111/gamechat?lastId='+lastChatRecId, success:update_game_chat })
@@ -938,6 +940,8 @@ function init() {
 //   }
 
 }
+
+
 
 window.onload = init;
 setInterval(updateSlow, 2000);

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="icons.ttf" rel="stylesheet">
-    <title>WT MFD 1.0</title>
+    <title>WT MFD 1.0.2</title>
     <script src="mapa.js"></script>
     <script src="jquery-1.10.2.min.js"></script>
     <script src="sylvester.src.js"></script> 
@@ -103,13 +103,15 @@
 
             </div>
             <div class="MFD3">
+                
                 <div class="flex-column" class="margin">
                     <div class="flex-row" class="Speed">
                     
                       
                     </div>
                     <div id="map-root" class="ui-draggable" style="top: -26px; left: -6px;">
-                        <div class="caption"><div id="draghandle"></div></div>
+                        <div class="caption"><div id="draghandle"></div>
+                    </div>
                         <div class="ui-wrapper">
                             <canvas class="teste22" id="map-canvas" width="440" height="440"></div></div>
                       </div>
@@ -117,6 +119,7 @@
                 </div>
 
         </div>
+        
         <div class="coluna1">
             <div class="MFD3">
                 <div class="flex-column2">
@@ -125,20 +128,18 @@
                     <img id="compass" class="compassc" src="compassc.png" alt="">
                     <img class="compassplane" src="compassplane.png" alt="">
 
-                   </div>
-
-    
                 </div>
-                
-
-
-        </div>
-        
+        </div>      
         </div>
         <div class="coluna1">
-            <div class="text2d">            <h1>Instructions</h1><br>
-                <p>Whenever you respawn a new plane, click "sync"</p></div><br><p></p>
-
+            <div class="MFD4">
+                <img id="alavanca" class="alavanca" src="alavanca.png" alt="">  
+                <div id="led1" class="led-inactive"></div>    
+                <div id="led2" class="led-inactive1"></div>    
+                <div id="led3" class="led-inactive2"></div>
+                <div id="aoa"></div>      
+                <div id="g_meter"></div>      
+            </div>
         </div>
 
    
